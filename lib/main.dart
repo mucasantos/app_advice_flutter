@@ -1,5 +1,5 @@
-
 import 'package:app_advicer/application/core/services/theme_service.dart';
+import 'package:app_advicer/application/pages/adivice/advice_page.dart';
 import 'package:app_advicer/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -23,10 +23,11 @@ class MyApp extends StatelessWidget {
       builder: (context, themeService, child) {
         return MaterialApp(
           title: 'Basic Widgets',
-          themeMode: themeService.isDarkModeOn ? ThemeMode.dark : ThemeMode.light,
+          themeMode:
+              themeService.isDarkModeOn ? ThemeMode.dark : ThemeMode.light,
           theme: AppTheme.lightTheme,
           darkTheme: AppTheme.darkTheme,
-          home: const Placeholder(),
+          home: const AdvicerPage(),
         );
       },
     );
